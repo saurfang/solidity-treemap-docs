@@ -6,38 +6,25 @@
  */
 
 const siteConfig = {
-  title: 'OpenZeppelin',
-  tagline: 'OpenZeppelin is an open framework of reusable and secure smart contracts in the Solidity language.',
-  url: 'https://openzeppelin.org',
-  baseUrl: '/api/',
-  projectName: 'api',
+  title: 'Solidity TreeMap',
+  tagline: 'A Solidity library which implements a navigable order static sorted treemap using Red Black Tree.',
+  url: 'https://saurfang.github.io',
+  baseUrl: '/solidity-treemap/',
+  projectName: 'solidity-treemap',
   headerLinks: [
     {
-      href: 'https://openzeppelin.org',
+      href: 'https://saurfang.github.io/solidity-treemap',
       label: 'Home',
     },
     {
-      doc: 'open-zeppelin',
-      label: 'Docs',
-    },
-    {
-      doc: 'crowdsale_Crowdsale',
-      label: 'API',
-    },
-    {
-      href: 'https://github.com/OpenZeppelin',
+      href: 'https://github.com/saurfang/solidity-treemap',
       label: 'Github',
     },
   ],
-  headerIcon: 'img/logo-zeppelin.png',
-  footerIcon: 'img/symbol-zeppelin.png',
-  favicon: 'img/favicon.png',
   colors: {
     primaryColor: '#5CB6E4',
     secondaryColor: 'white',
   },
-  copyright: 'Copyright © 2018 Smart Contract Solutions',
-  gaTrackingId: 'UA-85043059-1',
   highlight: {
     theme: 'default',
   },
@@ -46,7 +33,7 @@ const siteConfig = {
     'https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css',
     'https://fonts.googleapis.com/css?family=Lato:100,200,300,400,500,700,400italic,700italic',
   ],
-  repoUrl: 'https://github.com/OpenZeppelin/zeppelin-solidity',
+  repoUrl: 'https://github.com/saurfang/solidity-treemap',
 };
 
 module.exports = siteConfig;

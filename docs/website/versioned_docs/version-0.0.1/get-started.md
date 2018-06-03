@@ -1,6 +1,7 @@
 ---
-id: get-started
+id: version-0.0.1-get-started
 title: Get Started
+original_id: get-started
 ---
 
 Install the library code as a regular npm package:

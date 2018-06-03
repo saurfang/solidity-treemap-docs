@@ -34,7 +34,7 @@ class Versions extends React.Component {
                 <tr>
                   <th>{latestVersion}</th>
                   <td>
-                    <a href={`${siteConfig.baseUrl}docs/open-zeppelin.html`}>Documentation</a>
+                    <a href={`${siteConfig.baseUrl}docs/TreeMap.html`}>Documentation</a>
                   </td>
                   <td>
                     <a href={getVersionReleaseNotes(latestVersion)}>Release Notes</a>
@@ -52,7 +52,7 @@ class Versions extends React.Component {
                       <tr key={version}>
                         <th>{version}</th>
                         <td>
-                          <a href={`${siteConfig.baseUrl}docs/${version}/open-zeppelin.html`}>Documentation</a>
+                          <a href={`${siteConfig.baseUrl}docs/${version}/TreeMap.html`}>Documentation</a>
                         </td>
                         <td>
                           <a href={getVersionReleaseNotes(version)}>Release Notes</a>
@@ -65,7 +65,7 @@ class Versions extends React.Component {
             </table>
             <p>
               You can find all releases of this project{' '}
-              <a href="https://github.com/OpenZeppelin/zeppelin-solidity/releases/"> on GitHub </a>.
+              <a href="https://github.com/saurfang/solidity-treemap/releases/"> on GitHub </a>.
             </p>
           </div>
         </Container>
@@ -79,7 +79,7 @@ class Versions extends React.Component {
  */
 function getVersionReleaseNotes (version) {
   return [
-    'https://github.com/OpenZeppelin/zeppelin-solidity/releases/tag/',
+    'https://github.com/saurfang/solidity-treemap/releases/tag/',
     `v${version}`,
   ].join('');
 }

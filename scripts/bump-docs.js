@@ -9,7 +9,7 @@ const tmp = require('tmp')
 function main(argv) {
   if(argv.length !== 3) {
     console.error([
-      'Missing OpenZeppelin repository tag.',
+      'Missing saurfang repository tag.',
       'Usage: npm run bump-docs -- <tag>',
       'Example: npm run bump-docs -- v1.7.0'
     ].join('\n'))
@@ -19,17 +19,17 @@ function main(argv) {
   const version = tag.slice(1)
   const tempDir = tmp.dirSync().name
   try {
-    const repoDir = path.resolve(tempDir, 'zeppelin-solidity')
+    const repoDir = path.resolve(tempDir, 'solidity-treemap')
     const contractsDir = path.resolve(repoDir, 'contracts')
     const parentDir = path.resolve('..')
     const outputDir = path.resolve('docs')
     const websiteDir = path.resolve(outputDir, 'website')
     const apiDir = path.resolve(websiteDir, 'build', 'api')
     shell.cd(tempDir)
-    handleErrorCode(shell.exec('git clone https://github.com/OpenZeppelin/zeppelin-solidity.git'))
-    shell.cd('zeppelin-solidity')
+    handleErrorCode(shell.exec('git clone https://github.com/saurfang/solidity-treemap.git'))
+    shell.cd('solidity-treemap')
     handleErrorCode(shell.exec(`git checkout -b ${tag} ${tag}`))
-    handleErrorCode(shell.exec(`npx solidity-docgen ${repoDir} ${contractsDir} ${outputDir} --exclude mocks,examples`))
+    handleErrorCode(shell.exec(`npx solidity-docgen ${repoDir} ${contractsDir} ${outputDir} --exclude mocks,Migrations.sol`))
     shell.cd(websiteDir)
     handleErrorCode(shell.exec(`yarn install`))
     handleErrorCode(shell.exec(`npm run version ${version}`))
